@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Code for the crf_indicator_data_batch feature.
+ */
+
+include_once 'crf_indicator_data_batch.features.inc';
+
+
+
+
+
+
+
+
