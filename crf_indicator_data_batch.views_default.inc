@@ -203,13 +203,6 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['arguments']['uuid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uuid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['uuid']['limit'] = '0';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -262,6 +255,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['filters']['field_ind_unit_value']['table'] = 'field_data_field_ind_unit';
   $handler->display->display_options['filters']['field_ind_unit_value']['field'] = 'field_ind_unit_value';
   $handler->display->display_options['filters']['field_ind_unit_value']['relationship'] = 'field_ind_def_nid';
+  $handler->display->display_options['filters']['field_ind_unit_value']['group'] = 1;
   $handler->display->display_options['filters']['field_ind_unit_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_ind_unit_value']['expose']['operator_id'] = 'field_ind_unit_value_op';
   $handler->display->display_options['filters']['field_ind_unit_value']['expose']['label'] = 'Unit';
@@ -539,7 +533,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'openlayers_map';
-  $handler->display->display_options['style_options']['map'] = 'indicator_data_batch';
+  $handler->display->display_options['style_options']['map'] = 'crf_indicator_data_batch';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
