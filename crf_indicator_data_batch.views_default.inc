@@ -369,7 +369,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_need']['relationship'] = 'field_indicator_data_nid';
   $handler->display->display_options['fields']['field_ind_need']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_need']['settings'] = array(
-    'thousand_separator' => ' ',
+    'thousand_separator' => '',
     'decimal_separator' => '.',
     'scale' => '2',
     'prefix_suffix' => 1,
@@ -381,7 +381,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_target']['relationship'] = 'field_indicator_data_nid';
   $handler->display->display_options['fields']['field_ind_target']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_target']['settings'] = array(
-    'thousand_separator' => ' ',
+    'thousand_separator' => '',
     'decimal_separator' => '.',
     'scale' => '2',
     'prefix_suffix' => 1,
@@ -393,7 +393,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_coverage']['relationship'] = 'field_indicator_data_nid';
   $handler->display->display_options['fields']['field_ind_coverage']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_coverage']['settings'] = array(
-    'thousand_separator' => ' ',
+    'thousand_separator' => '',
     'decimal_separator' => '.',
     'scale' => '2',
     'prefix_suffix' => 1,
