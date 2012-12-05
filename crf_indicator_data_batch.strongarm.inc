@@ -109,7 +109,7 @@ function crf_indicator_data_batch_strongarm() {
           'weight' => '5',
         ),
         'workbench_access' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
       ),
       'display' => array(),

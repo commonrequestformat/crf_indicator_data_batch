@@ -84,7 +84,7 @@ function crf_indicator_data_batch_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -189,7 +189,7 @@ function crf_indicator_data_batch_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -281,7 +281,7 @@ function crf_indicator_data_batch_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -290,107 +290,13 @@ function crf_indicator_data_batch_field_default_fields() {
   $fields['node-indicator_data_batch-field_indicator_data'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_indicator_data',
       'field_permissions' => array(
         'type' => '0',
       ),
-      'foreign keys' => array(
-        'nid' => array(
-          'columns' => array(
-            'nid' => 'nid',
-          ),
-          'table' => 'node',
-        ),
-      ),
-      'indexes' => array(
-        'nid' => array(
-          0 => 'nid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'node_reference',
-      'settings' => array(
-        'referenceable_types' => array(
-          'assessment' => 0,
-          'cluster_objectives' => 0,
-          'contact' => 0,
-          'crf_request' => 0,
-          'hr_sitrep' => 0,
-          'indicator_data' => 'indicator_data',
-          'indicator_data_batch' => 0,
-          'indicator_definition' => 0,
-          'link' => 0,
-          'page' => 0,
-          'sectoral_analysis' => 0,
-        ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => '',
-          'view_name' => '',
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'node_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'indicator_data_batch',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'node_reference',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-          ),
-          'type' => 'node_reference_default',
-          'weight' => '2',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_indicator_data',
-      'label' => 'Indicator Data',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'node_reference',
-        'settings' => array(
-          'autocomplete_match' => 'contains',
-          'autocomplete_path' => 'node_reference/autocomplete',
-          'references_dialog_add' => 1,
-          'references_dialog_edit' => 1,
-          'references_dialog_search' => 0,
-          'references_dialog_search_view' => '',
-          'size' => '60',
-        ),
-        'type' => 'node_reference_autocomplete',
-        'weight' => '3',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-indicator_data_batch-field_indicator_data_item'.
-  $fields['node-indicator_data_batch-field_indicator_data_item'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_indicator_data_item',
       'foreign keys' => array(
         'node' => array(
           'columns' => array(
@@ -428,6 +334,7 @@ function crf_indicator_data_batch_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'indicator_data_batch',
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -440,7 +347,7 @@ function crf_indicator_data_batch_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 5,
+          'weight' => 6,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -450,21 +357,27 @@ function crf_indicator_data_batch_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_indicator_data_item',
+      'entityconnect_unload_add' => '0',
+      'entityconnect_unload_edit' => '0',
+      'field_name' => 'field_indicator_data',
       'label' => 'Indicator Data',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'module' => 'entityreference_view_widget',
+        'active' => 1,
+        'module' => 'entityreference',
         'settings' => array(
-          'pass_argument' => FALSE,
-          'view' => '',
+          'match_operator' => 'CONTAINS',
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'path' => '',
+          'size' => '60',
         ),
-        'type' => 'entityreference_view_widget',
-        'weight' => '7',
+        'type' => 'entityreference_autocomplete',
+        'weight' => '4',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 

@@ -83,12 +83,11 @@ function crf_indicator_data_batch_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Relationship: Content: Indicator Data (field_indicator_data) */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['field_indicator_data_nid']['id'] = 'field_indicator_data_nid';
   $handler->display->display_options['relationships']['field_indicator_data_nid']['table'] = 'field_data_field_indicator_data';
   $handler->display->display_options['relationships']['field_indicator_data_nid']['field'] = 'field_indicator_data_nid';
   $handler->display->display_options['relationships']['field_indicator_data_nid']['required'] = TRUE;
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['delta'] = '-1';
   /* Relationship: Content: Indicator (field_ind_def) */
   $handler->display->display_options['relationships']['field_ind_def_nid']['id'] = 'field_ind_def_nid';
   $handler->display->display_options['relationships']['field_ind_def_nid']['table'] = 'field_data_field_ind_def';
@@ -423,12 +422,11 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Indicator Data (field_indicator_data) */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['field_indicator_data_nid']['id'] = 'field_indicator_data_nid';
   $handler->display->display_options['relationships']['field_indicator_data_nid']['table'] = 'field_data_field_indicator_data';
   $handler->display->display_options['relationships']['field_indicator_data_nid']['field'] = 'field_indicator_data_nid';
   $handler->display->display_options['relationships']['field_indicator_data_nid']['required'] = TRUE;
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['delta'] = '-1';
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
@@ -552,7 +550,7 @@ function crf_indicator_data_batch_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('field_indicator_data'),
+    t('field_indicator_data_nid'),
     t('field_indicator_definition'),
     t('Date'),
     t('Cluster'),
