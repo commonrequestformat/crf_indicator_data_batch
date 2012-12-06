@@ -83,23 +83,24 @@ function crf_indicator_data_batch_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Relationship: Broken/missing handler */
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['id'] = 'field_indicator_data_nid';
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['table'] = 'field_data_field_indicator_data';
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['field'] = 'field_indicator_data_nid';
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['required'] = TRUE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['id'] = 'field_indicator_data_target_id';
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['table'] = 'field_data_field_indicator_data';
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['field'] = 'field_indicator_data_target_id';
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['label'] = 'Indicator Data Item';
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['required'] = TRUE;
   /* Relationship: Content: Indicator (field_ind_def) */
   $handler->display->display_options['relationships']['field_ind_def_nid']['id'] = 'field_ind_def_nid';
   $handler->display->display_options['relationships']['field_ind_def_nid']['table'] = 'field_data_field_ind_def';
   $handler->display->display_options['relationships']['field_ind_def_nid']['field'] = 'field_ind_def_nid';
-  $handler->display->display_options['relationships']['field_ind_def_nid']['relationship'] = 'field_indicator_data_nid';
-  $handler->display->display_options['relationships']['field_ind_def_nid']['label'] = 'field_indicator_definition';
+  $handler->display->display_options['relationships']['field_ind_def_nid']['relationship'] = 'field_indicator_data_target_id';
+  $handler->display->display_options['relationships']['field_ind_def_nid']['label'] = 'Indicator Definition';
   $handler->display->display_options['relationships']['field_ind_def_nid']['delta'] = '-1';
   /* Field: Content: Date */
   $handler->display->display_options['fields']['field_ind_date']['id'] = 'field_ind_date';
   $handler->display->display_options['fields']['field_ind_date']['table'] = 'field_data_field_ind_date';
   $handler->display->display_options['fields']['field_ind_date']['field'] = 'field_ind_date';
-  $handler->display->display_options['fields']['field_ind_date']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_date']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_date']['settings'] = array(
     'format_type' => 'long',
@@ -118,14 +119,14 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_def']['id'] = 'field_ind_def';
   $handler->display->display_options['fields']['field_ind_def']['table'] = 'field_data_field_ind_def';
   $handler->display->display_options['fields']['field_ind_def']['field'] = 'field_ind_def';
-  $handler->display->display_options['fields']['field_ind_def']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_def']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_def']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_def']['type'] = 'node_reference_plain';
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
-  $handler->display->display_options['fields']['field_locations']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_locations']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_locations']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_locations']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_locations']['group_rows'] = FALSE;
@@ -140,7 +141,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_need']['id'] = 'field_ind_need';
   $handler->display->display_options['fields']['field_ind_need']['table'] = 'field_data_field_ind_need';
   $handler->display->display_options['fields']['field_ind_need']['field'] = 'field_ind_need';
-  $handler->display->display_options['fields']['field_ind_need']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_need']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_need']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_need']['settings'] = array(
     'thousand_separator' => ' ',
@@ -152,7 +153,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_target']['id'] = 'field_ind_target';
   $handler->display->display_options['fields']['field_ind_target']['table'] = 'field_data_field_ind_target';
   $handler->display->display_options['fields']['field_ind_target']['field'] = 'field_ind_target';
-  $handler->display->display_options['fields']['field_ind_target']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_target']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_target']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_target']['settings'] = array(
     'thousand_separator' => ' ',
@@ -164,7 +165,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_coverage']['id'] = 'field_ind_coverage';
   $handler->display->display_options['fields']['field_ind_coverage']['table'] = 'field_data_field_ind_coverage';
   $handler->display->display_options['fields']['field_ind_coverage']['field'] = 'field_ind_coverage';
-  $handler->display->display_options['fields']['field_ind_coverage']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_coverage']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_coverage']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_coverage']['settings'] = array(
     'thousand_separator' => ' ',
@@ -176,7 +177,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -214,6 +215,8 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['filters']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['filters']['field_locations_tid']['table'] = 'field_data_field_locations';
   $handler->display->display_options['filters']['field_locations_tid']['field'] = 'field_locations_tid';
+  $handler->display->display_options['filters']['field_locations_tid']['relationship'] = 'field_indicator_data_target_id';
+  $handler->display->display_options['filters']['field_locations_tid']['value'] = '';
   $handler->display->display_options['filters']['field_locations_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_locations_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_locations_tid']['expose']['operator_id'] = 'field_locations_tid_op';
@@ -221,6 +224,14 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['filters']['field_locations_tid']['expose']['operator'] = 'field_locations_tid_op';
   $handler->display->display_options['filters']['field_locations_tid']['expose']['identifier'] = 'field_locations_tid';
   $handler->display->display_options['filters']['field_locations_tid']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_locations_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    218860149 => 0,
+    200153887 => 0,
+    52310416 => 0,
+    30037204 => 0,
+  );
   $handler->display->display_options['filters']['field_locations_tid']['vocabulary'] = 'locations';
   $handler->display->display_options['filters']['field_locations_tid']['hierarchy'] = 1;
   /* Filter criterion: Content: Cluster (field_cluster) */
@@ -241,7 +252,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['filters']['field_ind_def_nid']['id'] = 'field_ind_def_nid';
   $handler->display->display_options['filters']['field_ind_def_nid']['table'] = 'field_data_field_ind_def';
   $handler->display->display_options['filters']['field_ind_def_nid']['field'] = 'field_ind_def_nid';
-  $handler->display->display_options['filters']['field_ind_def_nid']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['filters']['field_ind_def_nid']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['filters']['field_ind_def_nid']['group'] = 1;
   $handler->display->display_options['filters']['field_ind_def_nid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_ind_def_nid']['expose']['operator_id'] = 'field_ind_def_nid_op';
@@ -249,6 +260,14 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['filters']['field_ind_def_nid']['expose']['operator'] = 'field_ind_def_nid_op';
   $handler->display->display_options['filters']['field_ind_def_nid']['expose']['identifier'] = 'field_ind_def_nid';
   $handler->display->display_options['filters']['field_ind_def_nid']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_ind_def_nid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    218860149 => 0,
+    200153887 => 0,
+    52310416 => 0,
+    30037204 => 0,
+  );
   /* Filter criterion: Content: Unit (field_ind_unit) */
   $handler->display->display_options['filters']['field_ind_unit_value']['id'] = 'field_ind_unit_value';
   $handler->display->display_options['filters']['field_ind_unit_value']['table'] = 'field_data_field_ind_unit';
@@ -264,10 +283,10 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['filters']['field_ind_unit_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    6 => 0,
-    5 => 0,
-    4 => 0,
-    3 => 0,
+    218860149 => 0,
+    200153887 => 0,
+    52310416 => 0,
+    30037204 => 0,
   );
   $handler->display->display_options['filters']['field_ind_unit_value']['group_info']['label'] = 'Unit (field_ind_unit)';
   $handler->display->display_options['filters']['field_ind_unit_value']['group_info']['identifier'] = 'field_ind_unit_value';
@@ -324,7 +343,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_date']['id'] = 'field_ind_date';
   $handler->display->display_options['fields']['field_ind_date']['table'] = 'field_data_field_ind_date';
   $handler->display->display_options['fields']['field_ind_date']['field'] = 'field_ind_date';
-  $handler->display->display_options['fields']['field_ind_date']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_date']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_date']['settings'] = array(
     'format_type' => 'long',
@@ -343,14 +362,14 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_def']['id'] = 'field_ind_def';
   $handler->display->display_options['fields']['field_ind_def']['table'] = 'field_data_field_ind_def';
   $handler->display->display_options['fields']['field_ind_def']['field'] = 'field_ind_def';
-  $handler->display->display_options['fields']['field_ind_def']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_def']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_def']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_def']['type'] = 'node_reference_plain';
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
-  $handler->display->display_options['fields']['field_locations']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_locations']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_locations']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_locations']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_locations']['group_rows'] = FALSE;
@@ -365,7 +384,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_need']['id'] = 'field_ind_need';
   $handler->display->display_options['fields']['field_ind_need']['table'] = 'field_data_field_ind_need';
   $handler->display->display_options['fields']['field_ind_need']['field'] = 'field_ind_need';
-  $handler->display->display_options['fields']['field_ind_need']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_need']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_need']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_need']['settings'] = array(
     'thousand_separator' => '',
@@ -377,7 +396,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_target']['id'] = 'field_ind_target';
   $handler->display->display_options['fields']['field_ind_target']['table'] = 'field_data_field_ind_target';
   $handler->display->display_options['fields']['field_ind_target']['field'] = 'field_ind_target';
-  $handler->display->display_options['fields']['field_ind_target']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_target']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_target']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_target']['settings'] = array(
     'thousand_separator' => '',
@@ -389,7 +408,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_coverage']['id'] = 'field_ind_coverage';
   $handler->display->display_options['fields']['field_ind_coverage']['table'] = 'field_data_field_ind_coverage';
   $handler->display->display_options['fields']['field_ind_coverage']['field'] = 'field_ind_coverage';
-  $handler->display->display_options['fields']['field_ind_coverage']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_coverage']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_coverage']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_coverage']['settings'] = array(
     'thousand_separator' => '',
@@ -422,27 +441,32 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Broken/missing handler */
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['id'] = 'field_indicator_data_nid';
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['table'] = 'field_data_field_indicator_data';
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['field'] = 'field_indicator_data_nid';
-  $handler->display->display_options['relationships']['field_indicator_data_nid']['required'] = TRUE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['id'] = 'field_indicator_data_target_id';
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['table'] = 'field_data_field_indicator_data';
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['field'] = 'field_indicator_data_target_id';
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['label'] = 'Indicator Data Item';
+  $handler->display->display_options['relationships']['field_indicator_data_target_id']['required'] = TRUE;
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['relationships']['term_node_tid']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['relationships']['term_node_tid']['label'] = 'locations';
   $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
     'locations' => 'locations',
     'clusters' => 0,
     'coordination_hubs' => 0,
     'disaster_types' => 0,
+    'display_properties' => 0,
+    'document_types' => 0,
     'emergencies' => 0,
     'funding' => 0,
     'job_title' => 0,
     'organization_types' => 0,
     'organizations' => 0,
+    'population_types' => 0,
+    'sections' => 0,
     'themes' => 0,
   );
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -450,7 +474,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_date']['id'] = 'field_ind_date';
   $handler->display->display_options['fields']['field_ind_date']['table'] = 'field_data_field_ind_date';
   $handler->display->display_options['fields']['field_ind_date']['field'] = 'field_ind_date';
-  $handler->display->display_options['fields']['field_ind_date']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_date']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_date']['settings'] = array(
     'format_type' => 'long',
@@ -468,20 +492,20 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_def']['id'] = 'field_ind_def';
   $handler->display->display_options['fields']['field_ind_def']['table'] = 'field_data_field_ind_def';
   $handler->display->display_options['fields']['field_ind_def']['field'] = 'field_ind_def';
-  $handler->display->display_options['fields']['field_ind_def']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_def']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_def']['element_label_colon'] = FALSE;
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
-  $handler->display->display_options['fields']['field_locations']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_locations']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_locations']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
   /* Field: Content: Need: Best Estimate */
   $handler->display->display_options['fields']['field_ind_need']['id'] = 'field_ind_need';
   $handler->display->display_options['fields']['field_ind_need']['table'] = 'field_data_field_ind_need';
   $handler->display->display_options['fields']['field_ind_need']['field'] = 'field_ind_need';
-  $handler->display->display_options['fields']['field_ind_need']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_need']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_need']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_need']['settings'] = array(
     'thousand_separator' => ' ',
@@ -493,7 +517,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_target']['id'] = 'field_ind_target';
   $handler->display->display_options['fields']['field_ind_target']['table'] = 'field_data_field_ind_target';
   $handler->display->display_options['fields']['field_ind_target']['field'] = 'field_ind_target';
-  $handler->display->display_options['fields']['field_ind_target']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_target']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_target']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_target']['settings'] = array(
     'thousand_separator' => ' ',
@@ -505,7 +529,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_coverage']['id'] = 'field_ind_coverage';
   $handler->display->display_options['fields']['field_ind_coverage']['table'] = 'field_data_field_ind_coverage';
   $handler->display->display_options['fields']['field_ind_coverage']['field'] = 'field_ind_coverage';
-  $handler->display->display_options['fields']['field_ind_coverage']['relationship'] = 'field_indicator_data_nid';
+  $handler->display->display_options['fields']['field_ind_coverage']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_coverage']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_coverage']['settings'] = array(
     'thousand_separator' => ' ',
@@ -550,8 +574,8 @@ function crf_indicator_data_batch_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('field_indicator_data_nid'),
-    t('field_indicator_definition'),
+    t('Indicator Data Item'),
+    t('Indicator Definition'),
     t('Date'),
     t('Cluster'),
     t('Indicator'),

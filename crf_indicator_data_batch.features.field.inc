@@ -290,7 +290,7 @@ function crf_indicator_data_batch_field_default_fields() {
   $fields['node-indicator_data_batch-field_indicator_data'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_indicator_data',
