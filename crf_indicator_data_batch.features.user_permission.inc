@@ -65,5 +65,27 @@ function crf_indicator_data_batch_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: view any unpublished indicator_data content.
+  $permissions['view any unpublished indicator_data content'] = array(
+    'name' => 'view any unpublished indicator_data content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+      2 => 'manager',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: view any unpublished indicator_data_batch content.
+  $permissions['view any unpublished indicator_data_batch content'] = array(
+    'name' => 'view any unpublished indicator_data_batch content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+      2 => 'manager',
+    ),
+    'module' => 'view_unpublished',
+  );
+
   return $permissions;
 }
