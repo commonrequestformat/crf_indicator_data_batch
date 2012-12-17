@@ -103,7 +103,7 @@ function crf_indicator_data_batch_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'workflow' => array(
           'weight' => '5',

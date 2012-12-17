@@ -25,6 +25,7 @@ features[field][] = node-indicator_data_batch-field_cluster
 features[field][] = node-indicator_data_batch-field_comments
 features[field][] = node-indicator_data_batch-field_crf_request
 features[field][] = node-indicator_data_batch-field_indicator_data
+features[field][] = node-indicator_data_batch-field_situational_indicator_data
 features[node][] = indicator_data_batch
 features[user_permission][] = create indicator_data_batch content
 features[user_permission][] = delete any indicator_data_batch content
