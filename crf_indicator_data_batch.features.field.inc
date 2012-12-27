@@ -367,7 +367,7 @@ function crf_indicator_data_batch_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'entityreference',
+        'module' => 'options',
         'settings' => array(
           'fields' => array(),
           'match_operator' => 'CONTAINS',
@@ -380,7 +380,7 @@ function crf_indicator_data_batch_field_default_fields() {
             'match_operator' => 'STARTS_WITH',
           ),
         ),
-        'type' => 'entityreference_autocomplete',
+        'type' => 'options_select',
         'weight' => '4',
       ),
       'workbench_access_field' => 0,
@@ -468,14 +468,14 @@ function crf_indicator_data_batch_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'entityreference',
+        'module' => 'options',
         'settings' => array(
           'match_operator' => 'CONTAINS',
           'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
           'path' => '',
           'size' => '60',
         ),
-        'type' => 'entityreference_autocomplete',
+        'type' => 'options_select',
         'weight' => '5',
       ),
       'workbench_access_field' => 0,
