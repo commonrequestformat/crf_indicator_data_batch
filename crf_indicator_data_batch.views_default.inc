@@ -137,7 +137,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_unit']['id'] = 'field_ind_unit';
   $handler->display->display_options['fields']['field_ind_unit']['table'] = 'field_data_field_ind_unit';
   $handler->display->display_options['fields']['field_ind_unit']['field'] = 'field_ind_unit';
-  $handler->display->display_options['fields']['field_ind_unit']['relationship'] = 'field_ind_def_nid';
+  $handler->display->display_options['fields']['field_ind_unit']['relationship'] = 'field_ind_def_target_id';
   $handler->display->display_options['fields']['field_ind_unit']['element_label_colon'] = FALSE;
   /* Field: Content: Need: Best Estimate */
   $handler->display->display_options['fields']['field_ind_need']['id'] = 'field_ind_need';
@@ -254,7 +254,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['filters']['field_ind_unit_value']['id'] = 'field_ind_unit_value';
   $handler->display->display_options['filters']['field_ind_unit_value']['table'] = 'field_data_field_ind_unit';
   $handler->display->display_options['filters']['field_ind_unit_value']['field'] = 'field_ind_unit_value';
-  $handler->display->display_options['filters']['field_ind_unit_value']['relationship'] = 'field_ind_def_nid';
+  $handler->display->display_options['filters']['field_ind_unit_value']['relationship'] = 'field_ind_def_target_id';
   $handler->display->display_options['filters']['field_ind_unit_value']['group'] = 1;
   $handler->display->display_options['filters']['field_ind_unit_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_ind_unit_value']['expose']['operator_id'] = 'field_ind_unit_value_op';
@@ -382,7 +382,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_unit']['id'] = 'field_ind_unit';
   $handler->display->display_options['fields']['field_ind_unit']['table'] = 'field_data_field_ind_unit';
   $handler->display->display_options['fields']['field_ind_unit']['field'] = 'field_ind_unit';
-  $handler->display->display_options['fields']['field_ind_unit']['relationship'] = 'field_ind_def_nid';
+  $handler->display->display_options['fields']['field_ind_unit']['relationship'] = 'field_ind_def_target_id';
   $handler->display->display_options['fields']['field_ind_unit']['element_label_colon'] = FALSE;
   /* Field: Content: Need: Best Estimate */
   $handler->display->display_options['fields']['field_ind_need']['id'] = 'field_ind_need';
