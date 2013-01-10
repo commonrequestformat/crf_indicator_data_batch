@@ -27,7 +27,7 @@ function crf_indicator_data_batch_views_api() {
 function crf_indicator_data_batch_node_info() {
   $items = array(
     'indicator_data_batch' => array(
-      'name' => t('Indicator Data'),
+      'name' => t('Indicator Values'),
       'base' => 'node_content',
       'description' => t('A complete batch of Indicator Data for a specific CRF Request.'),
       'has_title' => '1',
