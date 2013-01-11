@@ -20,6 +20,20 @@ function crf_indicator_data_batch_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_indicator_data_batch';
+  $strongarm->value = 'Data for Indicators';
+  $export['auto_entitylabel_pattern_node_indicator_data_batch'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_indicator_data_batch';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_indicator_data_batch'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_indicator_data_batch';
   $strongarm->value = 0;
   $export['comment_anonymous_indicator_data_batch'] = $strongarm;
