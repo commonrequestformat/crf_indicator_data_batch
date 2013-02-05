@@ -77,6 +77,7 @@ function crf_indicator_data_batch_field_default_fields() {
       'label' => 'Cluster',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -179,6 +180,7 @@ function crf_indicator_data_batch_field_default_fields() {
             ),
           ),
         ),
+        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -274,6 +276,7 @@ function crf_indicator_data_batch_field_default_fields() {
       'label' => 'Request',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -313,6 +316,7 @@ function crf_indicator_data_batch_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
@@ -363,6 +367,7 @@ function crf_indicator_data_batch_field_default_fields() {
       'label' => 'Performance-related Indicator Data',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -414,6 +419,7 @@ function crf_indicator_data_batch_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
@@ -464,6 +470,7 @@ function crf_indicator_data_batch_field_default_fields() {
       'label' => 'Situational Indicator Data',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(

@@ -14,9 +14,9 @@ function crf_indicator_data_batch_user_default_permissions() {
   $permissions['create indicator_data_batch content'] = array(
     'name' => 'create indicator_data_batch content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -25,9 +25,9 @@ function crf_indicator_data_batch_user_default_permissions() {
   $permissions['delete any indicator_data_batch content'] = array(
     'name' => 'delete any indicator_data_batch content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -36,9 +36,9 @@ function crf_indicator_data_batch_user_default_permissions() {
   $permissions['delete own indicator_data_batch content'] = array(
     'name' => 'delete own indicator_data_batch content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -47,9 +47,9 @@ function crf_indicator_data_batch_user_default_permissions() {
   $permissions['edit any indicator_data_batch content'] = array(
     'name' => 'edit any indicator_data_batch content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -58,9 +58,9 @@ function crf_indicator_data_batch_user_default_permissions() {
   $permissions['edit own indicator_data_batch content'] = array(
     'name' => 'edit own indicator_data_batch content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -69,9 +69,9 @@ function crf_indicator_data_batch_user_default_permissions() {
   $permissions['view any unpublished indicator_data content'] = array(
     'name' => 'view any unpublished indicator_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'view_unpublished',
   );
@@ -80,9 +80,9 @@ function crf_indicator_data_batch_user_default_permissions() {
   $permissions['view any unpublished indicator_data_batch content'] = array(
     'name' => 'view any unpublished indicator_data_batch content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'view_unpublished',
   );

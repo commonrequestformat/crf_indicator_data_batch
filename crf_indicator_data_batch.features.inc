@@ -18,7 +18,7 @@ function crf_indicator_data_batch_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function crf_indicator_data_batch_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**
