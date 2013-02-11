@@ -364,7 +364,7 @@ function crf_indicator_data_batch_field_default_fields() {
       'entityconnect_unload_add' => '0',
       'entityconnect_unload_edit' => '0',
       'field_name' => 'field_indicator_data',
-      'label' => 'Performance-related Indicator Data',
+      'label' => 'Indicator Data',
       'required' => 0,
       'settings' => array(
         'entity_translation_sync' => FALSE,
@@ -374,116 +374,10 @@ function crf_indicator_data_batch_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(
-          'fields' => array(),
-          'match_operator' => 'CONTAINS',
           'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-          'path' => '',
-          'size' => 60,
-          'type_settings' => array(
-            'allow_existing' => 1,
-            'delete_references' => 0,
-            'match_operator' => 'STARTS_WITH',
-          ),
         ),
         'type' => 'options_select',
         'weight' => '4',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-indicator_data_batch-field_situational_indicator_data'.
-  $fields['node-indicator_data_batch-field_situational_indicator_data'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_situational_indicator_data',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'node' => array(
-          'columns' => array(
-            'target_id' => 'nid',
-          ),
-          'table' => 'node',
-        ),
-      ),
-      'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'entityreference',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'indicator_data' => 'indicator_data',
-          ),
-        ),
-        'target_type' => 'node',
-      ),
-      'translatable' => '0',
-      'type' => 'entityreference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'indicator_data_batch',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'entityreference',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => 7,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'entityconnect_unload_add' => '0',
-      'entityconnect_unload_edit' => '0',
-      'field_name' => 'field_situational_indicator_data',
-      'label' => 'Situational Indicator Data',
-      'required' => 0,
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(
-          'match_operator' => 'CONTAINS',
-          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-          'path' => '',
-          'size' => '60',
-        ),
-        'type' => 'options_select',
-        'weight' => '5',
       ),
       'workbench_access_field' => 0,
     ),
@@ -493,9 +387,8 @@ function crf_indicator_data_batch_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Cluster');
   t('Comments');
-  t('Performance-related Indicator Data');
+  t('Indicator Data');
   t('Request');
-  t('Situational Indicator Data');
 
   return $fields;
 }
