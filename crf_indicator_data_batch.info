@@ -19,7 +19,6 @@ features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[field][] = node-indicator_data_batch-field_cluster
-features[field][] = node-indicator_data_batch-field_comments
 features[field][] = node-indicator_data_batch-field_crf_request
 features[field][] = node-indicator_data_batch-field_indicator_data
 features[node][] = indicator_data_batch

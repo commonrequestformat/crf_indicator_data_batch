@@ -112,20 +112,6 @@ function crf_indicator_data_batch_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(
-        'title' => array(
-          'weight' => '0',
-        ),
-        'path' => array(
-          'weight' => '7',
-        ),
-        'workflow' => array(
-          'weight' => '5',
-        ),
-        'workbench_access' => array(
-          'weight' => '1',
-        ),
-      ),
       'display' => array(),
     ),
   );
