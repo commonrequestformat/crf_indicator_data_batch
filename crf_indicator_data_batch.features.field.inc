@@ -325,7 +325,9 @@ function crf_indicator_data_batch_field_default_fields() {
             ),
           ),
           'sort' => array(
-            'type' => 'none',
+            'direction' => 'ASC',
+            'property' => 'title',
+            'type' => 'property',
           ),
           'target_bundles' => array(
             'indicator_data' => 'indicator_data',
