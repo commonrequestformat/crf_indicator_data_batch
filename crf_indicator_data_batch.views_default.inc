@@ -301,6 +301,20 @@ function crf_indicator_data_batch_views_default_views() {
   $handler = $view->new_display('block', 'Table', 'table');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 
+  /* Display: Teaser */
+  $handler = $view->new_display('block', 'Teaser', 'teaser');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'indicator_data_batch' => 'indicator_data_batch',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+
   /* Display: Graphs */
   $handler = $view->new_display('block', 'Graphs', 'graphs');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -594,6 +608,7 @@ function crf_indicator_data_batch_views_default_views() {
     t('Geographic Location'),
     t('Unit (field_ind_unit)'),
     t('Table'),
+    t('Teaser'),
     t('Graphs'),
     t('OpenLayers Data Overlay'),
     t('locations'),
