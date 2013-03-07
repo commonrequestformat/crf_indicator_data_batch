@@ -7,6 +7,21 @@
 include_once 'crf_indicator_data_batch.features.inc';
 
 
+/**
+ * Implements hook_views_pre_view().
+ */
+function crf_indicator_data_batch_views_pre_view(&$view, &$display_id, &$args) {
+  // Only display Indicator Value Items for the Indicator
+  // Value's cluster. 
+  if ($view->name == 'indicator_value_items_by_cluster') {
+    if (isset($_GET['edit']['field_cluster']['und'])) {
+      $args = array($_GET['edit']['field_cluster']['und']);
+    }
+    else if ($node = menu_get_object()) {
+      $args = array($node->field_cluster['und'][0]['tid']);
+    }
+  }
+}
 
 
 

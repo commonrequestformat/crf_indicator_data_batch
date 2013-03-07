@@ -50,6 +50,7 @@ features[variable][] = print_display_comment_indicator_data_batch
 features[variable][] = print_display_indicator_data_batch
 features[variable][] = print_display_urllist_indicator_data_batch
 features[views_view][] = indicator_data_batch
+features[views_view][] = indicator_value_items_by_cluster
 features_exclude[dependencies][views] = views
 features_exclude[dependencies][views_highcharts] = views_highcharts
 l10n path = http://localize.humanitarianresponse.info/sites/localize.humanitarianresponse.info/files/l10n_packager/%core/%project/%project-%release.%language.po

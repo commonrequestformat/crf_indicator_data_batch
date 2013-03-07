@@ -211,20 +211,17 @@ function crf_indicator_data_batch_field_default_fields() {
       'module' => 'entityreference',
       'settings' => array(
         'entity_translation_sync' => FALSE,
-        'handler' => 'base',
+        'handler' => 'views',
         'handler_settings' => array(
           'behaviors' => array(
             'views-select-list' => array(
               'status' => 0,
             ),
           ),
-          'sort' => array(
-            'direction' => 'ASC',
-            'property' => 'title',
-            'type' => 'property',
-          ),
-          'target_bundles' => array(
-            'indicator_data' => 'indicator_data',
+          'view' => array(
+            'args' => array(),
+            'display_name' => 'entityreference_1',
+            'view_name' => 'indicator_value_items_by_cluster',
           ),
         ),
         'target_type' => 'node',
@@ -261,7 +258,7 @@ function crf_indicator_data_batch_field_default_fields() {
       'entityconnect_unload_edit' => '0',
       'field_name' => 'field_indicator_data',
       'label' => 'Indicator Data',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
