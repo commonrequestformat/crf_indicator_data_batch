@@ -6,6 +6,7 @@ php = 5.2.4
 dependencies[] = crf_content_batch
 dependencies[] = crf_requests
 dependencies[] = entityconnect
+dependencies[] = entityreference
 dependencies[] = hr_graphs
 dependencies[] = hr_indicator_data
 dependencies[] = hr_mapping_styles

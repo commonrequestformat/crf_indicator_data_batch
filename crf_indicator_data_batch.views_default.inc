@@ -124,7 +124,7 @@ function crf_indicator_data_batch_views_default_views() {
     'link' => 0,
   );
   $handler->display->display_options['fields']['field_ind_def']['group_column'] = 'nid';
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -213,7 +213,7 @@ function crf_indicator_data_batch_views_default_views() {
     'indicator_data_batch' => 'indicator_data_batch',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Location (field_locations) */
+  /* Filter criterion: Field: Location (field_locations) */
   $handler->display->display_options['filters']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['filters']['field_locations_tid']['table'] = 'field_data_field_locations';
   $handler->display->display_options['filters']['field_locations_tid']['field'] = 'field_locations_tid';
@@ -383,7 +383,7 @@ function crf_indicator_data_batch_views_default_views() {
     'link' => 0,
   );
   $handler->display->display_options['fields']['field_ind_def']['group_column'] = 'nid';
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -434,6 +434,57 @@ function crf_indicator_data_batch_views_default_views() {
     'scale' => '2',
     'prefix_suffix' => 1,
   );
+
+  /* Display: Teaser Graphs */
+  $handler = $view->new_display('block', 'Teaser Graphs', 'teaser_graphs');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'highcharts';
+  $handler->display->display_options['style_options']['format']['title'] = '';
+  $handler->display->display_options['style_options']['format']['swap_axes'] = 0;
+  $handler->display->display_options['style_options']['y_axis']['reversed'] = 0;
+  $handler->display->display_options['style_options']['x_axis']['dataset_data'] = array(
+    'field_ind_need' => 'field_ind_need',
+    'field_ind_target' => 'field_ind_target',
+    'field_ind_coverage' => 'field_ind_coverage',
+    'field_ind_date' => 0,
+    'field_cluster' => 0,
+    'field_ind_def' => 0,
+    'field_locations' => 0,
+    'field_ind_unit' => 0,
+    'nid' => 0,
+    'nothing' => 0,
+  );
+  $handler->display->display_options['style_options']['x_axis']['dataset_label'] = 'field_ind_def';
+  $handler->display->display_options['style_options']['x_axis']['reversed'] = 0;
+  $handler->display->display_options['style_options']['pie']['dataset_data'] = array(
+    'field_ind_date' => 0,
+    'field_cluster' => 0,
+    'field_ind_def' => 0,
+    'field_locations' => 0,
+    'field_ind_unit' => 0,
+    'field_ind_need' => 0,
+    'field_ind_target' => 0,
+    'field_ind_coverage' => 0,
+    'nid' => 0,
+    'nothing' => 0,
+  );
+  $handler->display->display_options['style_options']['pie']['donut_hole'] = '0';
+  $handler->display->display_options['style_options']['pie']['data_labels'] = 1;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'indicator_data_batch' => 'indicator_data_batch',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
 
   /* Display: OpenLayers Data Overlay */
   $handler = $view->new_display('openlayers', 'OpenLayers Data Overlay', 'openlayers_data_overlay');
@@ -512,7 +563,7 @@ function crf_indicator_data_batch_views_default_views() {
   $handler->display->display_options['fields']['field_ind_def']['relationship'] = 'field_indicator_data_target_id';
   $handler->display->display_options['fields']['field_ind_def']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ind_def']['group_column'] = 'nid';
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -610,6 +661,7 @@ function crf_indicator_data_batch_views_default_views() {
     t('Table'),
     t('Teaser'),
     t('Graphs'),
+    t('Teaser Graphs'),
     t('OpenLayers Data Overlay'),
     t('locations'),
     t('Map'),
