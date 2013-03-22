@@ -113,6 +113,17 @@ function crf_indicator_data_batch_strongarm() {
     ),
     'extra_fields' => array(
       'display' => array(),
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '6',
+        ),
+        'workbench_access' => array(
+          'weight' => '1',
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__indicator_data_batch'] = $strongarm;
